@@ -56,7 +56,6 @@ pub fn parse_def_predecl(
         working_set.exit_scope();
         if let (Some(name), Some(mut signature)) = (name, signature) {
             signature.name = name;
-            //            *signature = signature.add_help();
             let decl = signature.predeclare();
 
             if working_set.add_predecl(decl).is_some() {
